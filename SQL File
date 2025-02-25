@@ -1,0 +1,9 @@
+USE SUPERSTORE;
+SELECT * FROM samplesuperstore;
+SELECT Segment, Sales From samplesuperstore; 
+SELECT Category, Region, Profit FROM samplesuperstore;
+SELECT Category, sales FROM samplesuperstore WHERE Category = "Technology"; 
+SELECT STATE, SALES FROM samplesuperstore WHERE STATE = "TEXAS";
+SELECT Count(*) FROM samplesuperstore WHERE Quantity = 2 GROUP BY City;
+SELECT SEGMENT, REGION, AVG(Profit/Sales) as AvgProfitMargin FROM samplesuperstore GROUP BY SEGMENT, REGION;
+SELECT * FROM samplesuperstore WHERE Sales > (SELECT Avg(Sales) FROM samplesuperstore);  
